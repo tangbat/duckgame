@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $prevScore = $_POST['score'];
     $userAnswer = $_POST['answer'];
     $prevTotalNoAdd = $_POST['total'];
-    $prevTotal = $_POST['total'] + 1; 
+    $prevTotal = $_POST['total'] + 1;
     
     if (is_numeric($_POST['answer'])) {
         if($prevOperation == '+') {
@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $firstNum = rand(0, 20);
     $secondNum = rand(0, 20);
     if($holder == 1) {
-      $operation = '+';
+      $operation = '+'; 
     }
     else {
       $operation = '-'; 

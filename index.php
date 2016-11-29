@@ -1,4 +1,4 @@
-<?php  session_start(); 
+<?php  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -48,11 +48,11 @@
         <div class="col-sm-3 col-sm-offset-4">
                   
         <?php
-            if(isset($_POST['login'])) {
+            if(isset($_POST['login'])) {   
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
-                if($user == "duk@duk.duk" && $pass == "duk")  
-                    $_SESSION['use']=$user;                   
+                if($user == "duk@duk.duk" && $pass == "duk") { 
+                    $_SESSION['use']=$user;               
                     echo '<script type="text/javascript"> window.open("mathGame.php",
                         "_self");</script>';       
                 } else {
