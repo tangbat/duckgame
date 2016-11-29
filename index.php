@@ -1,18 +1,4 @@
-<?php  session_start();   // session starts with the help of this function 
-?>
-<?php
-//tells user they logged out successfully
-/*if(isset( $_GET ['logoutMsg']))
-{
-    echo $_GET ['logoutMsg'];
-}*/
-/*
-if(isset($_SESSION['use']))   // Checking whether the session is already there or not if 
-                              // true that header redirect it to the home page directly 
- {
-    //header("Location:home.php"); 
- }
-*/
+<?php  session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -62,13 +48,11 @@ if(isset($_SESSION['use']))   // Checking whether the session is already there o
         <div class="col-sm-3 col-sm-offset-4">
                   
         <?php
-            if(isset($_POST['login'])) {   // it checks whether the user clicked 
-                                           //login button or not 
+            if(isset($_POST['login'])) {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
-                if($user == "duk@duk.duk" && $pass == "duk") {   // username is "a@a.a"   
-                    $_SESSION['use']=$user;                   // password is "aaa"     
-                    //if login info is right, redirect to home.php page
+                if($user == "duk@duk.duk" && $pass == "duk")  
+                    $_SESSION['use']=$user;                   
                     echo '<script type="text/javascript"> window.open("mathGame.php",
                         "_self");</script>';       
                 } else {

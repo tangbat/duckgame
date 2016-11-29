@@ -9,8 +9,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $prevOperation = $_POST['operation'];
     $prevScore = $_POST['score'];
     $userAnswer = $_POST['answer'];
-    $prevTotalNoAdd = $_POST['total']; //when invalid input. don't increase total count.
-    $prevTotal = $_POST['total'] + 1; // increase total count for each time a new total is requested.
+    $prevTotalNoAdd = $_POST['total'];
+    $prevTotal = $_POST['total'] + 1; 
     
     if (is_numeric($_POST['answer'])) {
         if($prevOperation == '+') {
@@ -42,10 +42,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $firstNum = rand(0, 20);
     $secondNum = rand(0, 20);
     if($holder == 1) {
-      $operation = '+'; // Set Operator as addition
+      $operation = '+';
     }
     else {
-      $operation = '-'; // Set Operator as subtraction
+      $operation = '-'; 
     }
     if(isset($_POST['logout'])) {
     header("location: index.php");
